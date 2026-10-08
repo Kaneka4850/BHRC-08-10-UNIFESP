@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defesa de Mestrado - Arquitetura Genética do TEA e SAS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#DCEBF7', // Áreas de apoio/backgrounds secundários
+                            border: '#9CC3E4', // Linhas, bordas discretas e detalhes
+                            primary: '#1F4E79', // Títulos e destaques semânticos
+                            body: '#2B3440', // Texto principal
+                            muted: '#5F6B7A' // Notas, legendas e referências
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            color: #2B3440;
+            background-color: #FFFFFF;
+        }
+        ::selection {
+            background-color: #DCEBF7;
+            color: #1F4E79;
+        }
+        /* Tabela Acadêmica */
+        .academic-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        .academic-table th, .academic-table td {
+            padding: 1rem 0.5rem;
+        }
+        .academic-table thead {
+            border-top: 2px solid #1F4E79;
+            border-bottom: 1px solid #9CC3E4;
+        }
+        .academic-table tbody tr {
+            border-bottom: 1px solid #DCEBF7;
+        }
+        .academic-table tbody tr:last-child {
+            border-bottom: 2px solid #1F4E79;
+        }
+        .academic-table th {
+            font-weight: 600;
+            color: #1F4E79;
+        }
+        /* Placeholders */
+        .placeholder-box {
+            background-color: #f8fafc;
+            border: 1px dashed #9CC3E4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5F6B7A;
+            font-size: 0.875rem;
+            text-align: center;
+            padding: 2rem;
+            transition: all 0.2s;
+        }
+        .placeholder-box:hover {
+            background-color: #DCEBF7;
+            border-color: #1F4E79;
+        }
+        .content-width {
+            max-width: 65ch;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-brand-body leading-relaxed selection:bg-brand-light selection:text-brand-primary">
+
+    <!-- Hero Section / Capa -->
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-24 relative">
+        <div class="max-w-4xl w-full">
+            <p class="uppercase tracking-widest text-brand-muted text-sm mb-6 font-semibold">Defesa de Mestrado</p>
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 text-brand-primary">
+                Arquitetura Genética do Transtorno do Espectro Autista e a Validação Biológica da Escala de Aptidões Sociais (SAS)
+            </h1>
+            <h2 class="text-xl md:text-2xl text-brand-body font-light mb-16 max-w-3xl mx-auto leading-relaxed">
+                Uma Abordagem Integrativa Multimodal na Coorte Brasileira de Alto Risco (BHRCS)
+            </h2>
+            
+            <div class="mt-12 flex flex-col items-center gap-2">
+                <p class="font-medium text-lg">Apresentador: Cleber Augusto Muniz Cunha</p>
+                <p class="text-brand-muted">(CRBM: 66297)</p>
+                <p class="text-brand-muted mt-4">Universidade Federal de São Paulo (UNIFESP)</p>
+            </div>
+
+            <div class="mt-20 flex flex-col sm:flex-row justify-center gap-8 items-center">
+                <div class="placeholder-box w-48 h-24 rounded">[Inserir aqui: figura Logo UNIFESP do slide original]</div>
+                <div class="placeholder-box w-48 h-24 rounded">[Inserir aqui: figura Logo Einstein do slide original]</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Apresentação e Transparência Ética -->
+    <section class="py-24 px-6 bg-brand-light bg-opacity-30">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-3xl mb-12 border-b border-brand-border pb-4 text-brand-primary">Apresentação e Transparência Ética</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="font-semibold text-lg mb-4 text-brand-primary">Declaração de Conflito de Interesses</h3>
+                    <p class="mb-4 content-width">Declaro ser analista de bioinformática jr. da empresa Ollin Análises Genômicas (grupo EVA genomics).</p>
+                    <p class="content-width">Fora este vínculo empregatício, não possuo conflitos financeiros ou comerciais. Esta pesquisa possui caráter estritamente acadêmico e científico.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4 text-brand-primary">Apresentador</h3>
+                    <ul class="space-y-3">
+                        <li><strong>Cleber Augusto Muniz Cunha</strong></li>
+                        <li class="text-brand-muted">Biomédico (CRBM: 66297)</li>
+                        <li class="text-brand-muted">Especialista em Bioinformática (Einstein)</li>
+                        <li class="text-brand-muted">Mestrando (UNIFESP)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- A Escala de Aptidões Sociais (SAS) -->
+    <section class="py-32 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-4xl mb-16 text-center text-brand-primary">A Escala de Aptidões Sociais (SAS)</h2>
+            
+            <div class="flex flex-col md:flex-row justify-between border-t border-b border-brand-border py-8 mb-16 gap-8">
+                <div class="flex-1 text-center">
+                    <span class="block text-xl font-serif text-brand-primary mb-2">Avaliação Bidirecional</span>
+                </div>
+                <div class="flex-1 text-center md:border-l md:border-r border-brand-border px-4">
+                    <span class="block text-xl font-serif text-brand-primary mb-2">Evita Efeito Teto</span>
+                </div>
+                <div class="flex-1 text-center">
+                    <span class="block text-xl font-serif text-brand-primary mb-2">Predição de Traços Contínuos</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <h3 class="font-bold text-lg mb-3 text-brand-primary">O que é</h3>
+                    <p class="text-brand-muted content-width">Questionário de 10 itens integrante do DAWBA. Preenchido por cuidadores.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-3 text-brand-primary">Objetivo Clínico</h3>
+                    <p class="text-brand-muted content-width">Avaliar quantitativamente nuances da compreensão e comportamento social.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-3 text-brand-primary">Métrica de Triagem</h3>
+                    <p class="text-brand-muted content-width">Identifica risco para TEA captando déficits dimensionais na cognição.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- A Escala SAS na Prática -->
+    <section class="py-32 px-6 bg-gray-50 border-y border-brand-border border-opacity-30">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="font-serif text-3xl mb-6 text-brand-primary">A Escala SAS na Prática</h2>
+            <p class="text-lg font-medium text-brand-primary mb-16">Escores globais ≤ 12 ativam investigação profunda para TEA.</p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-4">
+                    <ul class="space-y-5 border-l-2 border-brand-border pl-6">
+                        <li><strong class="text-brand-primary block text-xl mb-1">0:</strong> <span class="text-brand-muted">Muito pior</span></li>
+                        <li><strong class="text-brand-primary block text-xl mb-1">1:</strong> <span class="text-brand-muted">Pior</span></li>
+                        <li><strong class="text-brand-primary block text-xl mb-1">2:</strong> <span class="text-brand-muted">Na média</span></li>
+                        <li><strong class="text-brand-primary block text-xl mb-1">3:</strong> <span class="text-brand-muted">Melhor</span></li>
+                        <li><strong class="text-brand-primary block text-xl mb-1">4:</strong> <span class="text-brand-muted">Muito melhor</span></li>
+                    </ul>
+                </div>
+                
+                <div class="lg:col-span-8 overflow-x-auto">
+                    <table class="academic-table text-base min-w-[500px]">
+                        <thead>
+                            <tr>
+                                <th class="w-24">Item</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="font-semibold">SAS 1</td><td class="text-brand-muted">Capacidade de rir com os outros.</td></tr>
+                            <tr><td class="font-semibold">SAS 2</td><td class="text-brand-muted">Manter conversas fora do interesse especial.</td></tr>
+                            <tr><td class="font-semibold">SAS 3</td><td class="text-brand-muted">Ser flexível e chegar a meios-termos.</td></tr>
+                            <tr><td class="font-semibold">SAS 4</td><td class="text-brand-muted">Atenuar situações tensas ou embaraçosas.</td></tr>
+                            <tr><td class="font-semibold">SAS 5</td><td class="text-brand-muted">Espírito esportivo ao perder ou errar.</td></tr>
+                            <tr><td class="font-semibold">SAS 6</td><td class="text-brand-muted">Conforto das pessoas com a sua presença.</td></tr>
+                            <tr><td class="font-semibold">SAS 7</td><td class="text-brand-muted">Leitura de entrelinhas e sentimentos.</td></tr>
+                            <tr><td class="font-semibold">SAS 8</td><td class="text-brand-muted">Pedir desculpas e reparar vínculos.</td></tr>
+                            <tr><td class="font-semibold">SAS 9</td><td class="text-brand-muted">Liderança pró-social e colaborativa.</td></tr>
+                            <tr><td class="font-semibold">SAS 10</td><td class="text-brand-muted">Consciência de regras sociais não escritas.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O TEA e sua Arquitetura Genética -->
+    <section class="py-32 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-3xl mb-16 border-b border-brand-border pb-4 text-brand-primary">O TEA e sua Arquitetura Genética</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div class="space-y-12">
+                    <div>
+                        <h3 class="font-serif text-2xl mb-4 text-brand-primary">Continuum Comportamental</h3>
+                        <p class="content-width text-brand-muted">Extremos fenotípicos de um espectro contínuo de traços sociais na população geral.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-serif text-2xl mb-4 text-brand-primary">Alta Herdabilidade</h3>
+                        <p class="content-width text-brand-muted">Estimativas variam entre 83% e 90%. Componente biológico fortemente poligênico.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-brand-light bg-opacity-40 p-10 rounded border border-brand-border border-opacity-50">
+                    <h3 class="font-serif text-2xl mb-8 text-brand-primary">Arquitetura Molecular</h3>
+                    <ul class="space-y-8">
+                        <li class="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-2.5 before:w-2 before:h-2 before:bg-brand-primary before:rounded-full">
+                            <strong class="block text-brand-primary mb-1 text-lg">Raras:</strong>
+                            <span class="text-brand-muted block">Alta penetrância, frequentemente com comorbidades graves (mutações de novo).</span>
+                        </li>
+                        <li class="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-2.5 before:w-2 before:h-2 before:bg-brand-primary before:rounded-full">
+                            <strong class="block text-brand-primary mb-1 text-lg">Comuns (PRS):</strong>
+                            <span class="text-brand-muted block">Milhares de SNPs de pequeno efeito modulando os traços sociais contínuos.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objetivos da Pesquisa -->
+    <section class="py-32 px-6 bg-brand-primary text-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-3xl mb-16 text-brand-light border-b border-brand-light border-opacity-20 pb-4">Objetivos da Pesquisa</h2>
+            
+            <div class="mb-24">
+                <h3 class="text-sm tracking-widest uppercase mb-6 text-brand-border font-semibold">Objetivo Geral</h3>
+                <p class="font-serif text-3xl md:text-4xl leading-snug mb-6 content-width">Validar biologicamente a SAS como fenótipo dimensional para predição de traços do TEA.</p>
+                <p class="text-brand-light text-xl font-light">Através da investigação genômica na população brasileira.</p>
+            </div>
+            
+            <div>
+                <h3 class="text-sm tracking-widest uppercase mb-10 text-brand-border font-semibold">Objetivos Específicos</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
+                    <div class="flex items-start gap-5">
+                        <span class="text-brand-border font-serif text-2xl opacity-70">01.</span>
+                        <p class="text-lg leading-snug mt-1 font-light">Testar a associação longitudinal da SAS com o PRS do TEA.</p>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <span class="text-brand-border font-serif text-2xl opacity-70">02.</span>
+                        <p class="text-lg leading-snug mt-1 font-light">Estimar a herdabilidade embasada em variantes comuns (h²_SNP).</p>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <span class="text-brand-border font-serif text-2xl opacity-70">03.</span>
+                        <p class="text-lg leading-snug mt-1 font-light">Caracterizar a arquitetura genômica global da SAS (GWAS).</p>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <span class="text-brand-border font-serif text-2xl opacity-70">04.</span>
+                        <p class="text-lg leading-snug mt-1 font-light">Calcular a correlação genética (rg) entre SAS e risco de TEA.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodologia -->
+    <section class="py-32 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-3xl mb-8 border-b border-brand-border pb-4 text-brand-primary">Metodologia</h2>
+            <p class="text-2xl text-brand-muted mb-20 font-serif italic">Análise exploratória quantitativa</p>
+
+            <div class="flex flex-col md:flex-row gap-12 relative before:absolute before:left-4 md:before:left-auto md:before:top-4 md:before:h-px md:before:w-full md:before:bg-brand-border before:h-full before:w-px before:bg-brand-border">
+                
+                <div class="flex-1 relative pl-12 md:pl-0 md:pt-12">
+                    <div class="absolute left-0 top-0 md:left-auto md:top-0 w-8 h-8 rounded-full bg-white border border-brand-border flex items-center justify-center z-10 -ml-[15px] md:ml-0 md:-mt-4">
+                        <div class="w-2.5 h-2.5 bg-brand-primary rounded-full"></div>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3 text-brand-primary">Amostra BHRCS</h3>
+                    <p class="text-brand-muted mb-2">N = 2.511 probandos.</p>
+                    <p class="text-brand-muted">Avaliação longitudinal nas fases 0 a 3.</p>
+                </div>
+                
+                <div class="flex-1 relative pl-12 md:pl-0 md:pt-12">
+                    <div class="absolute left-0 top-0 md:left-auto md:top-0 w-8 h-8 rounded-full bg-white border border-brand-border flex items-center justify-center z-10 -ml-[15px] md:ml-0 md:-mt-4">
+                        <div class="w-2.5 h-2.5 bg-brand-primary rounded-full"></div>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3 text-brand-primary">Dados Fenotípicos</h3>
+                    <p class="text-brand-muted content-width">Escala SAS transformada em medidas contínuas (z-scores).</p>
+                </div>
+                
+                <div class="flex-1 relative pl-12 md:pl-0 md:pt-12">
+                    <div class="absolute left-0 top-0 md:left-auto md:top-0 w-8 h-8 rounded-full bg-white border border-brand-border flex items-center justify-center z-10 -ml-[15px] md:ml-0 md:-mt-4">
+                        <div class="w-2.5 h-2.5 bg-brand-primary rounded-full"></div>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3 text-brand-primary">Processamento</h3>
+                    <p class="text-brand-muted content-width">DNA em microarrays. PRS calculado com dados PGC. Regressão linear.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Achados Relevantes na Literatura -->
+    <section class="py-32 px-6 bg-brand-light bg-opacity-30">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-3xl mb-20 text-brand-primary">Achados Relevantes na Literatura</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-4 flex flex-col justify-center">
+                    <div class="text-center lg:text-left bg-white p-10 rounded border border-brand-border shadow-sm">
+                        <span class="block text-6xl md:text-7xl font-serif text-brand-primary mb-2">0,85</span>
+                        <span class="uppercase tracking-widest text-brand-muted font-bold text-sm">AUC</span>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-8 space-y-12">
+                    <div class="border-l-2 border-brand-border pl-8">
+                        <h3 class="font-serif text-xl mb-3 text-brand-primary">Adequação Clínica e Psicométrica</h3>
+                        <p class="text-brand-muted content-width">SAS isolada prediz diagnóstico de TEA com alta precisão em populações miscigenadas.</p>
+                    </div>
+                    <div class="border-l-2 border-brand-border pl-8">
+                        <h3 class="font-serif text-xl mb-3 text-brand-primary">Distribuição Subclínica</h3>
+                        <p class="text-brand-muted content-width">Prejuízos na cognição não operam em binário, manifestando-se em níveis moderados altamente herdáveis na população.</p>
+                    </div>
+                    <div class="border-l-2 border-brand-border pl-8">
+                        <h3 class="font-serif text-xl mb-3 text-brand-primary">Pleiotropia Transdiagnóstica</h3>
+                        <p class="text-brand-muted content-width">Loci de risco poligênico do TEA correlacionam-se com inteligência global, TDAH e distúrbios de humor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusões e Perspectivas -->
+    <section class="py-32 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-4xl mb-20 text-center text-brand-primary border-b border-brand-border pb-8">Conclusões e Perspectivas</h2>
+            
+            <div class="space-y-16">
+                <div class="flex flex-col md:flex-row gap-8 md:items-center">
+                    <div class="md:w-1/3">
+                        <h3 class="font-serif text-xl text-brand-primary md:text-right">Quebra de Paradigma</h3>
+                    </div>
+                    <div class="md:w-2/3 md:pl-8 md:border-l border-brand-border">
+                        <p class="text-brand-body text-lg content-width">Integração bidirecional (SAS) com genética molecular supera o diagnóstico exclusivamente dicotômico.</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-8 md:items-center">
+                    <div class="md:w-1/3">
+                        <h3 class="font-serif text-xl text-brand-primary md:text-right">Síntese Arquitetural</h3>
+                    </div>
+                    <div class="md:w-2/3 md:pl-8 md:border-l border-brand-border">
+                        <p class="text-brand-body text-lg content-width">Arquitetura une raras alterações de alto impacto à soma estocástica de polimorfismos comuns.</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-8 md:items-center">
+                    <div class="md:w-1/3">
+                        <h3 class="font-serif text-xl text-brand-primary md:text-right">Perspectiva Científica</h3>
+                    </div>
+                    <div class="md:w-2/3 md:pl-8 md:border-l border-brand-border">
+                        <p class="text-brand-primary text-xl content-width font-serif font-medium">SAS estabelece-se como endofenótipo reprodutível e biológico, promovendo precisão clínica no Brasil.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referências Bibliográficas -->
+    <footer class="bg-gray-50 py-24 px-6 border-t border-brand-border border-opacity-30 text-sm text-brand-muted">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-xl mb-12 text-brand-primary">Referências Bibliográficas</h2>
+            
+            <ol class="list-decimal pl-5 space-y-4 max-w-3xl">
+                <li>Salum GA, et al. High risk cohort study for psychiatric disorders in childhood: rationale, design, methods and preliminary results. Int J Methods Psychiatr Res. 2015;24(1):58-73.</li>
+                <li>Liddle EB, Batty MJ, Goodman R. The Social Aptitudes Scale: an initial validation. Soc Psychiatry Psychiatr Epidemiol. 2009;44(6):508-13.</li>
+                <li>Axelrud LK, et al. The Social Aptitudes Scale: looking at both "ends" of the social functioning dimension. Soc Psychiatry Psychiatr Epidemiol. 2017;52(8):1031-40.</li>
+                <li>Kaiser S, et al. Examining the psychometric properties of the Norwegian version of the Social Aptitudes Scale in two clinical samples. BMC Psychol. 2023;11(1):221.</li>
+                <li>Satterstrom FK, et al. Large-Scale Exome Sequencing Study Implicates Both Developmental and Functional Changes in the Neurobiology of Autism. Cell. 2020;180(3):568-584.</li>
+                <li>Chaste P, Leboyer M. Autism risk factors: genes, environment, and gene-environment interactions. Dialogues Clin Neurosci. 2012;14(3):281-92.</li>
+                <li>Ohi K, et al. Polygenic risk scores for major psychiatric and neurodevelopmental disorders contribute to sleep disturbance in childhood. Transl Psychiatry. 2021;11(1):187.</li>
+                <li>Chen C, et al. Polygenic risk score for five major psychiatric disorders associated with volume of distinct brain regions in the general population. Biol Psychol. 2023;178:108530.</li>
+            </ol>
+            
+            <div class="mt-20 pt-12 border-t border-brand-border border-opacity-30 text-center">
+                <p class="font-serif text-2xl text-brand-primary mb-4">Muito obrigado!</p>
+                <a href="mailto:cleber.cunha@unifesp.br" class="text-base text-brand-muted hover:text-brand-primary transition-colors">cleber.cunha@unifesp.br</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

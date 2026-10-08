@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Apresentação Front-End</title>
+    
+    <!-- Core do Reveal.js (Estilos base) -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <!-- Estilização Customizada (Foco em layouts modernos longe do padrão de IA) -->
+    <style>
+        :root {
+            --bg-main: #0d1117;       /* Fundo escuro premium style GitHub */
+            --bg-card: #161b22;       /* Fundo dos blocos (Bento Grid) */
+            --border-color: #30363d;  /* Bordas finas sutis */
+            --text-main: #c9d1d9;     /* Texto claro confortável para ler */
+            --accent-color: #58a6ff;  /* Cor de destaque (Azul moderno) */
+        }
+
+        .reveal {
+            background-color: var(--bg-main) !important;
+            color: var(--text-main) !important;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        }
+
+        /* Container padrão de slide para centralizar e organizar */
+        .slide-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Títulos Grandes e Imponentes */
+        h1.custom-title {
+            font-size: 2.8em !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            text-transform: none !important;
+            margin-bottom: 20px !important;
+            letter-spacing: -1px;
+        }
+
+        h2.custom-subtitle {
+            font-size: 1.8em !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+            text-transform: none !important;
+            margin-bottom: 30px !important;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* Layout Bento Grid (Organizado e visual) */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 20px;
+        }
+
+        .bento-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: left;
+            transition: border-color 0.3s ease;
+        }
+
+        .bento-item:hover {
+            border-color: var(--accent-color);
+        }
+
+        .bento-item h3 {
+            color: var(--accent-color) !important;
+            font-size: 1.2em !important;
+            margin-bottom: 10px !important;
+            font-weight: 600;
+        }
+
+        .bento-item p {
+            font-size: 0.75em !important;
+            line-height: 1.5;
+            color: var(--text-main);
+            margin: 0;
+        }
+
+        /* Span para destacar palavras chave */
+        .highlight {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- SLIDE 1: Capa Impactante -->
+            <section>
+                <div class="slide-container">
+                    <h1 class="custom-title">Apresentações com <span class="highlight">Front-End</span></h1>
+                    <p style="font-size: 0.9em; color: #8b949e;">Adeus templates prontos e engessados.</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 2: Conteúdo Estruturado em Bento Grid -->
+            <section>
+                <div class="slide-container">
+                    <h2 class="custom-subtitle">Por que codar seus slides?</h2>
+                    
+                    <div class="bento-grid">
+                        <div class="bento-item" style="grid-column: span 2;">
+                            <h3>01. Liberdade Absoluta</h3>
+                            <p>Sem limites de ferramentas freemium, marcas d'água irritantes ou designs gerados por inteligência artificial que todo mundo já enjoou de ver.</p>
+                        </div>
+                        <div class="bento-item">
+                            <h3>02. Performance</h3>
+                            <p>Roda direto da sua máquina local de forma extremamente leve e veloz.</p>
+                        </div>
+                        <div class="bento-item">
+                            <h3>03. Customizável</h3>
+                            <p>Modifique margens, paddings, grids e cores mudando apenas variáveis CSS locais.</p>
+                        </div>
+                        <div class="bento-item" style="grid-column: span 2;">
+                            <h3>04. Scripts Vivos</h3>
+                            <p>Se precisar, você pode embutir gráficos dinâmicos usando JS, rodar blocos de código com destaque de sintaxe real ou animações complexas.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SLIDE 3: Slide de Conclusão / Próximos Passos -->
+            <section>
+                <div class="slide-container">
+                    <h2 class="custom-subtitle">Pronto para rodar</h2>
+                    <p style="font-size: 0.85em; max-width: 600px; line-height: 1.6;">
+                        Cada tag <span class="highlight">&lt;section&gt;</span> funciona automaticamente como um slide novo. Use as setas do teclado para navegar ou pressione <span class="highlight">F11</span> no navegador para entrar em modo tela cheia.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Scripts do Reveal.js via CDN -->
+    <script src="https://cloudflare.com"></script>
+    <script>
+        // Inicializa o controle dos slides e transições
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            center: true,
+            transition: 'fade', // Opções: none, fade, slide, convex, concave, zoom
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# Dependências e Build
+node_modules/
+dist/
+build/
+.env
+
+# Julia
+*.jl.cov
+*.jl.stat
+*.jl.mem
+Manifest.toml
+
+# Arquivos Proibidos
+*.pdf
+*.pptx
+
+# OS
+.DS_Store
+Thumbs.db

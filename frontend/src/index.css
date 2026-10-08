@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-white text-brand-body font-sans transition-colors duration-300 antialiased;
+  }
+  
+  .dark body {
+    @apply bg-brand-darkBg text-brand-darkText;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+/* Minimalist scientific scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-muted;
+}
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-gray-600;
+}

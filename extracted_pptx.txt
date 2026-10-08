@@ -1,0 +1,159 @@
+--- Slide 1 ---
+DEFESA DE MESTRADO
+Arquitetura Genética do Transtorno do Espectro Autista e a Validação Biológica da Escala de Aptidões Sociais (SAS)
+Uma Abordagem Integrativa Multimodal na Coorte Brasileira de Alto Risco (BHRCS)
+Apresentador: Cleber Augusto Muniz Cunha 
+(CRBM: 66297)
+Universidade Federal de São Paulo (UNIFESP)
+--- Slide 2 ---
+Apresentação e Transparência Ética
+Declaração de Conflito de Interesses
+Declaro ser analista de bioinformática jr. da empresa Ollin Análises Genômicas (grupo EVA genomics).
+Fora este vínculo empregatício, 
+não possuo
+ conflitos financeiros ou comerciais. Esta pesquisa possui caráter estritamente acadêmico e científico.
+Cleber Augusto Muniz Cunha
+Biomédico (CRBM: 66297)
+Especialista em Bioinformática (Einstein)
+Mestrando (UNIFESP)
+--- Slide 3 ---
+A Escala de Aptidões Sociais (SAS)
+Avaliação Bidirecional
+Evita Efeito Teto
+Predição de Traços Contínuos
+O que é
+Questionário de 10 itens integrante do DAWBA. Preenchido por cuidadores.
+Objetivo Clínico
+Avaliar quantitativamente nuances da compreensão e comportamento social.
+Métrica de Triagem
+Identifica risco para TEA captando déficits dimensionais na cognição.
+--- Slide 4 ---
+A Escala SAS na Prática
+Escores globais ≤ 12 ativam investigação profunda para TEA.
+0:
+ Muito pior
+1:
+ Pior
+2:
+ Na média
+3:
+ Melhor
+4:
+ Muito melhor
+SAS 1
+Capacidade de rir com os outros.
+SAS 2
+Manter conversas fora do interesse especial.
+SAS 3
+Ser flexível e chegar a meios-termos.
+SAS 4
+Atenuar situações tensas ou embaraçosas.
+SAS 5
+Espírito esportivo ao perder ou errar.
+SAS 6
+Conforto das pessoas com a sua presença.
+SAS 7
+Leitura de entrelinhas e sentimentos.
+SAS 8
+Pedir desculpas e reparar vínculos.
+SAS 9
+Liderança pró-social e colaborativa.
+SAS 10
+Consciência de regras sociais não escritas.
+--- Slide 5 ---
+O TEA e sua Arquitetura Genética
+Continuum Comportamental
+Extremos fenotípicos de um espectro contínuo de traços sociais na população geral.
+Alta Herdabilidade
+Estimativas variam entre 83% e 90%. Componente biológico fortemente poligênico.
+Arquitetura Molecular
+Raras:
+ Alta penetrância, frequentemente com comorbidades graves (mutações 
+de novo
+).
+Comuns (PRS):
+ Milhares de SNPs de pequeno efeito modulando os traços sociais contínuos.
+--- Slide 6 ---
+Objetivos da Pesquisa
+OBJETIVO GERAL
+Validar biologicamente a SAS como fenótipo dimensional para predição de traços do TEA.
+Através da investigação genômica na população brasileira.
+OBJETIVOS ESPECÍFICOS
+Testar a associação longitudinal da SAS com o PRS do TEA.
+Estimar a herdabilidade embasada em variantes comuns (h²_SNP).
+Caracterizar a arquitetura genômica global da SAS (GWAS).
+Calcular a correlação genética (rg) entre SAS e risco de TEA.
+--- Slide 7 ---
+Metodologia
+Análise exploratória quantitativa
+Amostra BHRCS
+N = 2.511 probandos.
+
+
+ Avaliação longitudinal nas fases 0 a 3.
+Dados Fenotípicos
+Escala SAS transformada em medidas contínuas (z-scores).
+Processamento
+DNA em microarrays. PRS calculado com dados PGC. Regressão linear.
+--- Slide 8 ---
+Achados Relevantes na Literatura
+0,85
+AUC
+Adequação Clínica e Psicométrica
+SAS isolada prediz diagnóstico de TEA com alta precisão em populações miscigenadas.
+Distribuição Subclínica
+Prejuízos na cognição não operam em binário, manifestando-se em níveis moderados altamente herdáveis na população.
+Pleiotropia Transdiagnóstica
+Loci de risco poligênico do TEA correlacionam-se com inteligência global, TDAH e distúrbios de humor.
+--- Slide 9 ---
+Conclusões e Perspectivas
+Quebra de Paradigma
+Integração bidirecional (SAS) com genética molecular supera o diagnóstico exclusivamente dicotômico.
+Síntese Arquitetural
+Arquitetura une raras alterações de alto impacto à soma estocástica de polimorfismos comuns.
+Perspectiva Científica
+SAS estabelece-se como endofenótipo reprodutível e biológico, promovendo precisão clínica no Brasil.
+--- Slide 10 ---
+Referências Bibliográficas
+1. 
+Salum GA, et al.
+ High risk cohort study for psychiatric disorders in childhood: rationale, design, methods and preliminary results. 
+Int J Methods Psychiatr Res.
+ 2015;24(1):58-73.
+2. 
+Liddle EB, Batty MJ, Goodman R.
+ The Social Aptitudes Scale: an initial validation. 
+Soc Psychiatry Psychiatr Epidemiol.
+ 2009;44(6):508-13.
+3. 
+Axelrud LK, et al.
+ The Social Aptitudes Scale: looking at both "ends" of the social functioning dimension. 
+Soc Psychiatry Psychiatr Epidemiol.
+ 2017;52(8):1031-40.
+4. 
+Kaiser S, et al.
+ Examining the psychometric properties of the Norwegian version of the Social Aptitudes Scale in two clinical samples. 
+BMC Psychol.
+ 2023;11(1):221.
+5. 
+Satterstrom FK, et al.
+ Large-Scale Exome Sequencing Study Implicates Both Developmental and Functional Changes in the Neurobiology of Autism. 
+Cell.
+ 2020;180(3):568-584.
+6. 
+Chaste P, Leboyer M.
+ Autism risk factors: genes, environment, and gene-environment interactions. 
+Dialogues Clin Neurosci.
+ 2012;14(3):281-92.
+7. 
+Ohi K, et al.
+ Polygenic risk scores for major psychiatric and neurodevelopmental disorders contribute to sleep disturbance in childhood. 
+Transl Psychiatry.
+ 2021;11(1):187.
+8. 
+Chen C, et al.
+ Polygenic risk score for five major psychiatric disorders associated with volume of distinct brain regions in the general population. 
+Biol Psychol.
+ 2023;178:108530.
+Muito obrigado!
+cleber.cunha@unifesp.br
