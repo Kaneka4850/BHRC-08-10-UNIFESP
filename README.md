@@ -29,7 +29,7 @@ Siga o passo a passo abaixo para rodar o projeto localmente em sua máquina.
 3. **Acessando o ambiente Julia**
    Com o container em execução, você pode interagir com o ambiente do Julia através do comando:
    ```bash
-   docker exec -it sas_app julia
+   docker exec -it sas_julia julia
    ```
 
 4. **Encerrando o projeto**

@@ -1,16 +1,43 @@
 version: '3.8'
 
 services:
-  app:
+  # Ambiente Frontend (JavaScript, React, Vite)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: sas_frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules # Evita sobrescrever os modulos instalados no container
+    environment:
+      - NODE_ENV=development
+
+  # Ambiente Backend (Node.js e Python)
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: sas_backend
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+
+  # Ambiente Julia (Para scripts soltos na raiz)
+  julia:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: sas_app
+    container_name: sas_julia
     volumes:
       - .:/app
-    # Mantém o container rodando
+    # Mantém o container do Julia ativo em background caso queira rodar scripts interativos depois
     tty: true
     stdin_open: true
-    ports:
-      - "8000:8000"
-      - "5173:5173" # Porta padrão do Vite/React
+    command: julia
